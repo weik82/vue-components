@@ -1,0 +1,107 @@
+.vue-datepicker {
+  & > input {
+    padding: 5px 10px;
+    width: 200px;
+    line-height: 24px;
+    border: 1px solid #BFCBD7;
+    border-radius: 3px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    &:focus {
+      border: 1px solid #20a0ff;
+    }
+  }
+  .month-active{
+    border: 1px solid #20a0ff;
+  }
+  .vue-datepicker-wrap {
+    width: 240px;
+    box-shadow: 2px 2px 8px #bdb8b8;
+    z-index: 999;
+    .vue-datepicker-header {
+      padding: 0 15px;
+      font-size: 14px;
+      text-align: center;
+      line-height: 36px;
+      border-bottom: 1px solid #ccc;
+      .vue-datepicker-header-btn {
+        cursor: pointer;
+        &:hover {
+          color: #008afe;
+        }
+      }
+      .vue-datepicker-header-btn-pre {
+        float: left;
+      }
+      .vue-datepicker-header-btn-day {
+      }
+      .vue-datepicker-header-btn-next {
+        float: right;
+      }
+    }
+    .vue-datepicker-content {
+      position: relative;
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        thead {
+          line-height: 30px;
+          font-size: 12px;
+          background: #eee;
+        }
+        tbody {
+          tr {
+            line-height: 28px;
+            td {
+              font-size: 12px;
+              text-align: center;
+              cursor: pointer;
+              &.active, &.active:hover {
+                color: #fff;
+                background: #008afe;
+              }
+              &.flag {
+                color: #999;
+              }
+            }
+            td:hover {
+              background: #eee;
+            }
+          }
+        }
+      }
+      .vue-date-picker-year-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        ul {
+          width: 50%;
+          height: 100%;
+          margin: 0;
+          padding-left: 0;
+          box-sizing: border-box;
+          overflow-y: auto;
+          float: left;
+          list-style: none;
+          li {
+            font-size: 14px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            &.active {
+              color: #fff;
+              background: #007acc;
+            }
+          }
+          &:first-child {
+            border-right: 1px solid #007acc;
+          }
+        }
+      }
+    }
+  }
+}
